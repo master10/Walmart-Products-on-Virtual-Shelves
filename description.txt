@@ -1,0 +1,28 @@
+The above table describes about the feature name and the total number of 'Nan' values present in them. Total number of rows present in the data were 10593.
+
+Features which had comparatively less number of 'Nan' in them.
+Following were the features selected :
+1. Seller, 
+2. Item Class ID, 
+3. Product Long Description, 
+3. Product Name, 
+4. Product Short Description, 
+5. Short Description
+
+For all the features except Item class ID, the following was done:
+1. HTML tags were removed.
+2. Only letters were retained
+3. stops words were removed
+4. stemming was done
+
+To this corpus, Item class Id was appended because these were the only numbers we wanted to retain the feature set.
+Bag of words was then made for construction of features.
+After construction of features, ensemble method of developing models was used.
+It consisted of following models:
+1. random forest,
+2. naive bayes
+3. Extra trees
+4. svm with linear kernel
+
+
+The tags which were voted by 2 out of 5 models were predicted as the virtual shelf for the test set.
